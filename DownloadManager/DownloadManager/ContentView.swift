@@ -19,6 +19,13 @@ struct ContentView: View {
     }
 }
 
+extension ContentView {
+    func loadData() {
+        let movieURLs = [URL(string: "https://example.com/movie.mp4")!]
+        DownloadManager.shared.downloadMovies(movieURLs)
+    }
+}
+
 #Preview {
     ContentView()
 }
